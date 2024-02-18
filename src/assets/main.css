@@ -1,0 +1,65 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.mt {
+  margin-top: 10px;
+}
+
+.ml {
+  margin-left: 10px;
+}
+
+.mr {
+  margin-right: 10px;
+}
+
+.text-2x {
+  font-size: 24px;
+}
+
+.button {
+  display: inline-block;
+  padding: 18px 26px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+  color: #fff;
+  background-color: #ca3d0a;
+  border: 2px solid #ca3d0a;
+  transition: background-color 0.3s, color 0.3s;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #af3408;
+  border: 2px solid #af3408;
+}
+
+.disabled {
+  background-color: #838383;
+  border-color: #838383;
+}
+
+/* 基本样式 */
+.input-number {
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+}
+
+/* 鼠标悬停样式 */
+.input-number:hover {
+  border-color: #888;
+}
+
+/* 聚焦样式 */
+.input-number:focus {
+  border-color: #4caf50;
+  box-shadow: 0 0 5px #4caf50;
+}
