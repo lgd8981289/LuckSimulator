@@ -1,16 +1,34 @@
-# lucksimulator
+# lucksimulator：运气模拟器
 
-This template should help get you started developing with Vue 3 in Vite.
+> 这是一个参考 **2022 年，第 32 届搞笑诺贝尔奖经济学奖** 构建的 **运气模拟器**
 
-## Recommended IDE Setup
+[视频介绍直接点击这里](https://www.bilibili.com/video/BV1ct421b7Q7/?vd_source=391a8dc379e0da60c77490e3221f097a)
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+想要成功，到底是运气更重要，还是能力更重要呢？他们之间又存在什么样的关系呢？
 
-## Customize configuration
+在 2022 年，第 32 届搞笑诺贝尔奖经济学奖公布，说是搞笑诺贝尔奖，其实一点都不搞笑。
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+获奖者是三位意大利经济学家，他们的研究课题是：**天赋与运气随机性在成功与失败中的作用**
 
-## Project Setup
+![](https://files.mdnice.com/user/45849/d43f1a4e-bc08-4250-ab01-738ed3c3162e.png)
+
+他们通过数学模型的推演，最终得出的结论是：**成功往往不属于最有才华的人，而是属于最幸运的人**
+
+该模拟器就是为了验证这个理论。
+
+## 规则与逻辑
+
+![](https://files.mdnice.com/user/45849/a289719b-1c3c-45d3-b89e-00eea72800af.png)
+
+在这个运气模拟器中：
+1. **红点表示好运气**，用 **绿点表示坏运气**，用 **人头表示人**，人的数量与运气的数量都可以修改。
+2. 人不会移动，运气可以移动。移动的运气并不是连续的，而是会随机出现在任何的地方
+3. 当人的坐标与运气的坐标一致时，表示 **人遇到了运气**
+4. 运气分为**好运气**和**坏运气**：遭遇好运气，人的财富会根据能力进行翻倍，能力（0.3-0.9之间）越高翻倍的概率越大（1表示100%）。遭遇坏运气，人的财富会被砍半，这就和能力没有关系了
+5. 每个人初始都会有 100 块钱，能力会在 0.3 - 0.9 之间随机分配
+6. 假设人从20岁开始工作，到60岁结束，中间经历 40 年。运气将模拟这40年的经历，以每 500ms 表示一年，一共 20 秒来模拟这 40 年的经历
+
+## Project Setup（运行项目）
 
 ```sh
 npm install
